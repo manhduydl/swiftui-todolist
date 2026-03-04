@@ -19,6 +19,9 @@ struct ListView: View {
         List {
             ForEach(items) { item in
                 ListRowView(item: item)
+                    .alignmentGuide(.listRowSeparatorLeading) { _ in
+                        0
+                    }
             }
         }
         .listStyle(PlainListStyle())
