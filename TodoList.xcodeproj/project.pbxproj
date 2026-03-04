@@ -32,8 +32,8 @@
 		35A5C0182F581B2300E30FD3 = {
 			isa = PBXGroup;
 			children = (
-				35A5C0232F581B2300E30FD3 /* TodoList */,
 				35A5C0222F581B2300E30FD3 /* Products */,
+				35A5C0232F581B2300E30FD3 /* TodoList */,
 			);
 			sourceTree = "<group>";
 		};
