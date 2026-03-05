@@ -7,9 +7,23 @@
 
 import Foundation
 
-struct ItemModel: Identifiable {
-    var id: String = UUID().uuidString
-    var title: String
-    var isCompleted: Bool
+struct ItemModel: Identifiable, Equatable {
+    let id: String
+    let title: String
+    let isCompleted: Bool
+    
+    init(id: String = UUID().uuidString, title: String, isCompleted: Bool) {
+        self.id = id
+        self.title = title
+        self.isCompleted = isCompleted
+    }
+
+    func copy(title: String? = nil, isCompleted: Bool? = nil) -> ItemModel {
+        return ItemModel(
+            id: id,
+            title: title ?? self.title,
+            isCompleted: isCompleted ?? self.isCompleted
+        )
+    }
 }
 
